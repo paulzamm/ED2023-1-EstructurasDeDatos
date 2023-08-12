@@ -6,7 +6,7 @@ Archivos:
   -Serialización
   -Escritura y lectura de archivos
 TAD, algoritmos, ejemplos:
-  -Vector
+  -Vector                                  
   -Arraylist
   -Pila
   -Cola

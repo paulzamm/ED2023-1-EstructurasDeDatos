@@ -21,15 +21,15 @@ public class EjercicioTADlista {
 		}
 	}
 	
-	public static <T> int buscarEnLista(Lista<T> lista, T dato) {
+	public static <T extends Comparable<T>> int buscarEnLista(Lista<T> lista, T dato) {
 		Lista<T> aux = new TadLista<>();
 		aux.asignarReferencia(lista.devolverReferencia());
 		return buscarEnListaR(aux, dato, 1);
 	}
-	private static <T> int buscarEnListaR(Lista<T> lista, T dato, int cont) {
+	private static <T extends Comparable<T>> int buscarEnListaR(Lista<T> lista, T dato, int cont) {
 		int resul=0;
 		if(!lista.esNulo()) {
-			if(lista.devolverClave() == dato) {
+			if(lista.devolverClave().compareTo(dato) == 0) {
 				resul = cont;
 			}else {
 				lista.asignarReferencia(lista.devolverSiguiente());
